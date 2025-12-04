@@ -12,5 +12,9 @@
 	},
 	"observability": {
     "enabled": true
-  }
+  },
+	"routes": [
+		{ "pattern": "quedemandelepeuple.fr/*", "zone_name": "quedemandelepeuple.fr" }
+	]
+
 }
