@@ -1,22 +1,45 @@
 ---
-import astroLogo from "../assets/astro.svg";
+import { Image } from "astro:assets";
 import background from "../assets/background.svg";
+
+import Postcard from "../assets/postcard.png";
+import Remi01 from "../assets/remi-douat-01.jpg";
+import Remi02 from "../assets/remi-douat-02.jpg";
+import Popo01 from "../assets/pauline-maucort-01.jpeg";
+import Popo02 from "../assets/pauline-maucort-02.jpeg";
+import Politis from "../assets/politis.png";
+import Regards from "../assets/regards.png";
 ---
 
-<div id="container">
-    <img id="background" src={background.src} alt="" fetchpriority="high" />
-    <main>
-        <section id="hero">
-            <a href="https://astro.build"
-                ><img
-                    src={astroLogo.src}
-                    width="115"
-                    height="48"
-                    alt="Astro Homepage"
-                /></a
-            >
-            <h1>Que demande le peuple ! La parole est aux relégué.e.s</h1>
-            <section id="links">
+<div class="relative">
+    {/* Background */}
+    <img
+        src={background.src}
+        alt=""
+        class="fixed inset-0 w-full h-full object-cover blur-[100px] -z-10"
+        fetchpriority="high"
+    />
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16 pb-64">
+        <section id="hero" class="space-y-10">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+                Que demande le peuple !
+            </h1>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <p class="text-3xl md:text-5xl leading-tight text-black">
+                    La parole est aux relégué·e·s
+                </p>
+                <Image src={Postcard} alt="" class="w-full h-auto" />
+            </div>
+
+            <h2 class="text-xl text-gray-800 max-w-3xl">
+                "Que demande le peuple ?" série de podcasts qui fait entendre la
+                parole des oubliés, entre colère et solidarité. Soutenez la voix
+                populaire.
+            </h2>
+
+            <div class="space-y-6 pb-4 leading-relaxed text-gray-800">
                 <p>
                     Depuis plusieurs années, journalistes radio, nous allons à
                     la rencontre de celles et ceux qui travaillent dur,
@@ -31,196 +54,172 @@ import background from "../assets/background.svg";
                     vraiment ? Les mots sont trop souvent caricaturés,
                     instrumentalisés, réduits au vote Rassemblement national.
                 </p>
-            </section>
+            </div>
+
+            <Image src={Remi01} alt="" class="rounded-2xl w-full h-auto" />
+
+            <p class="text-sm text-gray-700">
+                (Au Lycée agricole de Nogent sur Vernisson, avec Jonathan Roditi
+                – juin 2024)
+            </p>
+
+            <div class="space-y-6 text-gray-800 leading-relaxed">
+                <p>
+                    Nous, nous voulons entendre ces mots, les enregistrer, les
+                    partager avec vous. Car derrière la colère, il y a aussi de
+                    l’attachement, de la solidarité, des joies qui maintiennent
+                    du lien : un barbecue partagé, une entraide discrète entre
+                    voisins, une place du village ou un spot de rassemblement au
+                    centre commercial.
+                </p>
+                <p>
+                    Avec ce projet, nous allons faire entendre les désirs, les
+                    revendications, les rêves et doléances. Ces paroles dites
+                    dans le sillage du mouvement des Gilets Jaunes ont été
+                    classées aux archives et trop vite oubliées. Six ans après,
+                    et avant les rendez-vous électoraux prochains, il est urgent
+                    de les écouter, enfin.
+                </p>
+            </div>
+
+            <blockquote class="text-center italic text-lg py-6">
+                <p>
+                    "Résiste<br />Suis ton cœur qui insiste<br />Ce monde n'est
+                    pas le tien…"
+                </p>
+                <footer class="pt-2 text-sm">France Gall</footer>
+            </blockquote>
+
+            <h3 class="text-center font-bold text-3xl">
+                Notre projet est né d’une conviction : la parole populaire est
+                souveraine. Elle doit être entendue dans sa complexité.
+            </h3>
+
+            <p class="text-gray-800 leading-relaxed pb-6">
+                Nous lançons la série de podcasts <strong
+                    >“Que demande le peuple ?”</strong
+                >. Un tour de France sonore, à hauteur de femmes et d’hommes,
+                pour donner à entendre ce qui se dit loin des micros des
+                plateaux télé. Chaque épisode partira d’une question simple :
+                comment vivre dignement ? Derrière cette question universelle se
+                déclinent mille réalités : habiter, se déplacer, se nourrir,
+                travailler, se soigner, s’instruire, bricoler, partager… Nous
+                irons dans l’Yonne, en Seine-Saint-Denis, en Haute-Marne, dans
+                le Gard, en Gironde, en Mayenne… Partout où s’exprime ce
+                sentiment d’abandon, mais aussi cette volonté farouche de
+                résister, de “tenir ensemble” malgré tout. Notre démarche est
+                claire : <strong
+                    >ne pas parler “sur” les gens, mais parler avec eux</strong
+                >. Passer du temps, tisser de la confiance, recueillir une
+                parole authentique, sans filtre.
+            </p>
+
+            <Image src={Popo01} alt="" class="rounded-2xl w-full h-auto" />
+
+            <p class="text-gray-800 leading-relaxed">
+                Nous sommes reporters pour les émissions documentaires de France
+                Culture. Après bientôt 20 ans d’expérience, pour la première
+                fois, nous voulons conduire un projet hors cases existantes et
+                inventer un format pour que la parole populaire se déploie
+                davantage.
+            </p>
+            <p class="text-gray-800 leading-relaxed">
+                Ces épisodes seront en libre accès. Nous espérons qu’ils
+                provoqueront des rencontres et attiseront les débats, partout
+                sur le territoire.
+            </p>
+        </section>
+
+        <section class="space-y-12">
+            <h3 class="text-center font-bold text-3xl">Qui porte le projet</h3>
+
+            <div class="flex flex-row justify-center gap-16 pt-5">
+                <div class="card bg-base-100 w-96 shadow-sm">
+                    <figure>
+                        <Image src={Popo02} alt="" />
+                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">Pauline Maucort</h4>
+                        <p>
+                            Journaliste à France Culture depuis 2007. Je signe
+                            de nombreux documentaires pour Les Pieds sur Terre,
+                            La Série documentaire ou Une histoire particulière.
+                            Basée en Bourgogne, je sillonne les routes pour
+                            recueillir les récits d’un pays qui doute mais
+                            continue de résister en créant du lien.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 w-96 shadow-sm">
+                    <figure>
+                        <Image src={Remi02} alt="" />
+                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">Rémi Dybowski Douat</h4>
+                        <p>
+                            Producteur et journaliste à Radio France depuis
+                            2010. Je travaille notamment sur l’extrême droite et
+                            les mouvements sociaux pour Les Pieds sur Terre et
+                            La Série documentaire. Je fais entendre la parole
+                            populaire là où elle est trop souvent ignorée.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="text-center bold text-xl pt-12 pb-2">
+                Deux médias indépendants portent le projet avec nous et seront
+                diffuseurs de la série de podcasts
+            </h3>
+            <div class="flex flex-row justify-center gap-16 pt-5">
+                <div class="card bg-base-100 w-96 shadow-sm">
+                    <figure>
+                        <Image src={Politis} alt="" />
+                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">Politis</h4>
+                        <p>
+                            Média indépendant qui porte un regard critique sur
+                            l’actualité politique générale depuis 1988. Tous les
+                            sujets sont abordés à travers des interviews,
+                            dossiers, reportages, enquêtes, articles et
+                            éditoriaux : international, politique, société,
+                            luttes sociales, intersections, écologie, idées,
+                            culture… Hebdomadaire papier et quotidien en ligne,
+                            Politis est désormais une coopérative : notre média
+                            appartient à ses salarié-es, ses lecteurices et ses
+                            partenaires. www.politis.fr
+                        </p>
+                        <a
+                            rel="nofollow noopener noreferrer"
+                            href="https://www.politis.fr">www.politis.fr</a
+                        >
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 w-96 shadow-sm">
+                    <figure>
+                        <Image src={Regards} alt="" />
+                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">Regards</h4>
+                        <p>
+                            magazine en ligne, une publication indépendante et
+                            une newsletter qui se consacre à l'analyse
+                            politique, sociale et culturelle. Héritier d'une
+                            longue tradition intellectuelle et militante,
+                            Regards se situe dans le courant d'une gauche
+                            critique, pluraliste et démocratique, attachée à la
+                            justice sociale, à l'écologie, à la démocratie et à
+                            l'émancipation collective.
+                        </p>
+                        <a
+                            rel="nofollow noopener noreferrer"
+                            href="https://www.regards.fr">www.regards.fr</a
+                        >
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
-    <a
-        href="https://fr.ulule.com/que-demande-le-peuple--/"
-        id="news"
-        class="box"
-    >
-        <h2>Impact du projet</h2>
-        <p>
-            “Que demande le peuple ?” rend audible la parole populaire, redonne
-            visibilité aux vies quotidiennes et crée du lien social. En libre
-            accès, chaque épisode valorise culture, éducation et engagement,
-            tout en stimulant le débat local. Avec votre soutien, nous
-            réaliserons les premiers épisodes, couvrant plusieurs régions
-            françaises, pour amplifier des voix trop souvent ignorées et
-            renforcer la solidarité et l’attention portée aux territoires
-            oubliés.
-        </p>
-    </a>
 </div>
-
-<style>
-    #background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        filter: blur(100px);
-    }
-
-    #container {
-        font-family:
-            Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
-            sans-serif;
-        height: 100%;
-    }
-
-    main {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    #hero {
-        display: flex;
-        align-items: start;
-        flex-direction: column;
-        justify-content: center;
-        padding: 16px;
-    }
-
-    h1 {
-        font-size: 22px;
-        margin-top: 0.25em;
-    }
-
-    #links {
-        display: flex;
-        gap: 16px;
-    }
-
-    #links a {
-        display: flex;
-        align-items: center;
-        padding: 10px 12px;
-        color: #111827;
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    #links a:hover {
-        color: rgb(78, 80, 86);
-    }
-
-    #links a svg {
-        height: 1em;
-        margin-left: 8px;
-    }
-
-    #links a.button {
-        color: white;
-        background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-        box-shadow:
-            inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-            inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-        border-radius: 10px;
-    }
-
-    #links a.button:hover {
-        color: rgb(230, 230, 230);
-        box-shadow: none;
-    }
-
-    pre {
-        font-family:
-            ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-            "DejaVu Sans Mono", monospace;
-        font-weight: normal;
-        background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin: 0;
-    }
-
-    h2 {
-        margin: 0 0 1em;
-        font-weight: normal;
-        color: #111827;
-        font-size: 20px;
-    }
-
-    p {
-        color: #4b5563;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.006em;
-        margin: 0;
-    }
-
-    code {
-        display: inline-block;
-        background:
-            linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-            linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%)
-                border-box;
-        border-radius: 8px;
-        border: 1px solid transparent;
-        padding: 6px 8px;
-    }
-
-    .box {
-        padding: 16px;
-        background: rgba(255, 255, 255, 1);
-        border-radius: 16px;
-        border: 1px solid white;
-    }
-
-    #news {
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-        max-width: 300px;
-        text-decoration: none;
-        transition: background 0.2s;
-        backdrop-filter: blur(50px);
-    }
-
-    #news:hover {
-        background: rgba(255, 255, 255, 0.55);
-    }
-
-    @media screen and (max-height: 368px) {
-        #news {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        #container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        #hero {
-            display: block;
-            padding-top: 10%;
-        }
-
-        #links {
-            flex-wrap: wrap;
-        }
-
-        #links a.button {
-            padding: 14px 18px;
-        }
-
-        #news {
-            right: 16px;
-            left: 16px;
-            bottom: 2.5rem;
-            max-width: 100%;
-        }
-
-        h1 {
-            line-height: 1.5;
-        }
-    }
-</style>
