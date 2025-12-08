@@ -4,8 +4,11 @@
         light --default,
         dark --prefersdark,
         bumblebee;
-}
-
+};
+@plugin "tailwind-clamp" {
+  minSize: 23.4375rem;
+  maxSize: 9rem;
+};
 @font-face {
     font-family: "Greve-900";
     src: url("../assets/font/subset-Greve-900.woff2") format("woff2");
