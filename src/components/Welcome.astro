@@ -22,12 +22,16 @@ import Regards from "../assets/regards.png";
 
     <main class="max-w-4xl mx-auto px-6 py-12 space-y-16 pb-64">
         <section id="hero" class="space-y-10">
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
-                Que demande le peuple !
+            <h1
+                class="font-[Greve-900] tracking-normal text-6xl md:text-8xl font-bold"
+            >
+                Que demande le peuple ?
             </h1>
 
             <div class="grid md:grid-cols-2 gap-8 items-center">
-                <p class="text-3xl md:text-5xl leading-tight text-black">
+                <p
+                    class="font-[Greve-900] text-4xl md:text-6xl tracking-normal leading-tight text-black"
+                >
                     La parole est aux relégué·e·s
                 </p>
                 <Image src={Postcard} alt="" class="w-full h-auto" />
@@ -90,7 +94,7 @@ import Regards from "../assets/regards.png";
                 <footer class="pt-2 text-sm">France Gall</footer>
             </blockquote>
 
-            <h3 class="text-center font-bold text-3xl">
+            <h3 class="font-[Open_Sans] text-center font-bold text-3xl">
                 Notre projet est né d’une conviction : la parole populaire est
                 souveraine. Elle doit être entendue dans sa complexité.
             </h3>
@@ -133,12 +137,12 @@ import Regards from "../assets/regards.png";
         <section class="space-y-12">
             <h3 class="text-center font-bold text-3xl">Qui porte le projet</h3>
 
-            <div class="flex flex-row justify-center gap-16 pt-5">
-                <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="flex flex-col justify-center gap-16 pt-5 sm:flex-row">
+                <div class="self-center card bg-base-100 w-96 shadow-sm">
                     <figure>
                         <Image src={Popo02} alt="" />
                     </figure>
-                    <div class="card-body">
+                    <div class="card-body bg-[#f9f4e8]">
                         <h4 class="card-title">Pauline Maucort</h4>
                         <p>
                             Journaliste à France Culture depuis 2007. Je signe
@@ -151,11 +155,11 @@ import Regards from "../assets/regards.png";
                     </div>
                 </div>
 
-                <div class="card bg-base-100 w-96 shadow-sm">
+                <div class="self-center card bg-base-100 w-96 shadow-sm">
                     <figure>
                         <Image src={Remi02} alt="" />
                     </figure>
-                    <div class="card-body">
+                    <div class="card-body bg-[#f9f4e8]">
                         <h4 class="card-title">Rémi Dybowski Douat</h4>
                         <p>
                             Producteur et journaliste à Radio France depuis
@@ -171,12 +175,12 @@ import Regards from "../assets/regards.png";
                 Deux médias indépendants portent le projet avec nous et seront
                 diffuseurs de la série de podcasts
             </h3>
-            <div class="flex flex-row justify-center gap-16 pt-5">
-                <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="flex flex-col justify-center gap-16 pt-5 sm:flex-row">
+                <div class="self-center card bg-base-100 w-96 shadow-sm">
                     <figure>
                         <Image src={Politis} alt="" />
                     </figure>
-                    <div class="card-body">
+                    <div class="card-body bg-[#f9f4e8]">
                         <h4 class="card-title">Politis</h4>
                         <p>
                             Média indépendant qui porte un regard critique sur
@@ -197,11 +201,11 @@ import Regards from "../assets/regards.png";
                     </div>
                 </div>
 
-                <div class="card bg-base-100 w-96 shadow-sm">
+                <div class="self-center card bg-base-100 w-96 shadow-sm">
                     <figure>
                         <Image src={Regards} alt="" />
                     </figure>
-                    <div class="card-body">
+                    <div class="card-body bg-[#f9f4e8]">
                         <h4 class="card-title">Regards</h4>
                         <p>
                             magazine en ligne, une publication indépendante et

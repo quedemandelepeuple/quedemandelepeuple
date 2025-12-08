@@ -1,5 +1,32 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+
+const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://fr.ulule.com/que-demande-le-peuple--/",
+            name: "Que Demande le Peuple ?",
+            description:
+                "Une série de podcasts qui fait entendre la parole des oublié·es, entre colère et solidarité. Soutenez la voix populaire !",
+            url: "https://quedemandelepeuple.fr/",
+            publisher: [
+                {
+                    "@type": "Person",
+                    name: "Pauline Maucort",
+                    url: "https://www.radiofrance.fr/personnes/pauline-maucort",
+                },
+                {
+                    "@type": "Person",
+                    name: "Rémi Dybowski Douat",
+                    url: "https://www.radiofrance.fr/personnes/remi-dybowski-douat",
+                },
+            ],
+        },
+    ],
+};
 ---
 
 <!doctype html>
@@ -8,11 +35,20 @@ import "../styles/global.css";
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
+        {
+            structuredData && (
+                <script
+                    is:inline
+                    type="application/ld+json"
+                    set:html={JSON.stringify(structuredData)}
+                />
+            )
+        }
         <title>"Que demande le peuple ?"</title>
     </head>
     <body>
         <slot />
+        <Footer />
     </body>
 </html>
 

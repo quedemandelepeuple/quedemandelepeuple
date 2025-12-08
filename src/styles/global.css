@@ -5,3 +5,11 @@
         dark --prefersdark,
         bumblebee;
 }
+
+@font-face {
+    font-family: "Greve-900";
+    src: url("../assets/font/subset-Greve-900.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
