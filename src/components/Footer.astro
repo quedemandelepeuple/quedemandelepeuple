@@ -1,13 +1,76 @@
-<footer
-    class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4"
->
-    <aside class="grid-flow-col items-center">
-        <p>
-            QUE DEMANDE LE PEUPLE ! - {new Date().getFullYear()}
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-accent text-neutral-content mt-auto">
+  <div class="max-w-6xl mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      
+      <!-- Brand Section -->
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="48" 
+          height="48" 
+          viewBox="0 0 64 64" 
+          fill="white"
+          aria-hidden="true"
+          class="transition-transform hover:scale-110"
+        >
+          <path d="M20 50.45a1 1 0 0 1-.71-.3l-5.65-5.65a1 1 0 0 1 0-1.42l21.22-21.21a1 1 0 0 1 1.41 0l5.66 5.66a1 1 0 0 1 .29.7 1 1 0 0 1-.29.71L20.72 50.15a1 1 0 0 1-.72.3m-4.24-6.66L20 48l19.8-19.8-4.24-4.2Z"/>
+          <path d="M45.46 29.33a11 11 0 1 1 7.78-3.22 10.94 10.94 0 0 1-7.78 3.22m0-20a9 9 0 1 0 6.37 15.37 9 9 0 0 0-6.37-15.36Z"/>
+          <path d="M35.56 34.89a1 1 0 0 1-.7-.29l-5.66-5.66a1 1 0 0 1 0-1.41l5.66-5.66a1 1 0 0 1 1.41 0l5.66 5.66a1 1 0 0 1 .29.7 1 1 0 0 1-.29.71l-5.66 5.66a1 1 0 0 1-.71.29m-4.24-6.66 4.24 4.25 4.25-4.25L35.56 24ZM16.12 50.8a1 1 0 0 1-.71-.29l-2.12-2.12a1 1 0 0 1 0-1.42l2.12-2.12a1 1 0 0 1 1.42 0L19 47a1 1 0 0 1 0 1.42l-2.12 2.12a1 1 0 0 1-.76.26m-.71-3.12.71.71.71-.71-.71-.68Z"/>
+          <path d="M17.45 56.86a2.65 2.65 0 0 1-1.81-.7c-2-1.79-1.66-6.57-1.58-7.51a1 1 0 0 1 1.09-.91 1 1 0 0 1 .9 1.09c-.17 1.93 0 5 .93 5.85a.73.73 0 0 0 .71.15c3.3-.66 7.38-3.36 7.42-3.39 1-.78 4.73-3.39 6.68-2.78A1.82 1.82 0 0 1 33 49.84a1 1 0 0 1-1.87.71c-.68-.06-2.93 1.09-4.85 2.53-.22.15-4.49 3-8.18 3.71a3.5 3.5 0 0 1-.65.07"/>
+        </svg>
+        
+        <p class="text-lg opacity-80">
+          {currentYear} — <span class="font-semibold text-lg text-center md:text-left">
+            QUE DEMANDE LE PEUPLE !
+            <span/>
         </p>
-    </aside>
-    <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <a href="/">accueil</a>
-        <a href="/mentions-legales">mentions légales</a>
-    </nav>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="flex flex-col md:flex-row items-center justify-center gap-4 text-center" aria-label="Navigation footer">
+        <a 
+          href="/" 
+          class="hover:underline hover:text-white transition-colors font-medium"
+          aria-label="Retour à l'accueil"
+        >
+          Accueil
+        </a>
+        <span class="hidden md:inline opacity-50" aria-hidden="true">|</span>
+        <a 
+          href="/mentions-legales" 
+          class="hover:underline hover:text-white transition-colors font-medium"
+        >
+          Mentions légales
+        </a>
+      </nav>
+
+      <!-- Social Links -->
+      <nav class="flex items-center justify-center md:justify-end gap-6" aria-label="Réseaux sociaux">
+        <a 
+          href="https://fr.ulule.com/que-demande-le-peuple--/" 
+          rel="noopener noreferrer" 
+          target="_blank"
+          class="group transition-transform hover:scale-110"
+          aria-label="Soutenez-nous sur Ulule (ouvre dans un nouvel onglet)"
+        >
+          <svg 
+            class="fill-current group-hover:opacity-80 transition-opacity" 
+            width="32" 
+            height="32" 
+            viewBox="0 0 24 24" 
+            role="img" 
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <title>Ulule</title>
+            <path d="M12 0A11.992 11.992 0 001.676 5.884l-.822-.822a.499.499 0 00-.707 0A.5.5 0 000 5.416V12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12V5.416a.5.5 0 00-.854-.354l-.823.822A11.992 11.992 0 0012 0zM6.814 7.626a5.526 5.526 0 014.971 3.095 2.739 2.739 0 00.13 3.754.122.122 0 00.17 0 2.738 2.738 0 00.13-3.754 5.526 5.526 0 015.411-3.077c2.702.214 4.876 2.41 5.064 5.113a5.528 5.528 0 01-10.419 2.944.304.304 0 00-.542 0 5.528 5.528 0 01-10.42-2.944c.189-2.703 2.363-4.9 5.064-5.113.148-.012.295-.018.44-.018zm-.42 1.22a3.501 3.496 0 00-.235.008c-.013.16-.116.262-.248.388l-.052.05c-.117.113-.335.323-.333.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.137-.523-.347-.722-.143-.13-.289-.281-.308-.422a3.501 3.496 0 00-.214-.01zm11.211 0a3.501 3.495 0 00-.235.008c-.013.16-.117.262-.249.388l-.051.05c-.118.113-.336.323-.334.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.136-.523-.347-.723-.143-.13-.288-.28-.307-.42a3.501 3.495 0 00-.215-.011zM6.093 8.86a3.501 3.496 0 00-3.2 3.48 3.501 3.496 0 003.502 3.496 3.501 3.496 0 003.5-3.496 3.501 3.496 0 00-3.033-3.46 2.393 2.393 0 11-2.86 2.362A2.386 2.386 0 016.093 8.86zm11.816 0a2.386 2.386 0 012.088 2.382 2.391 2.391 0 11-4.784-.033 2.393 2.393 0 011.92-2.328 3.501 3.495 0 00-3.03 3.46 3.501 3.495 0 003.502 3.495 3.501 3.495 0 003.501-3.496 3.501 3.495 0 00-3.197-3.48Z"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </div>
 </footer>
