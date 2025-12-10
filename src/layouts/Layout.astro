@@ -7,7 +7,7 @@ const structuredData = {
     "@graph": [
         {
             "@type": "WebSite",
-            "@id": "https://fr.ulule.com/que-demande-le-peuple--/",
+            "@id": "https://quedemandelepeuple.fr/",
             name: "Que Demande le Peuple ?",
             description:
                 "Une série de podcasts qui fait entendre la parole des oublié·es, entre colère et solidarité. Soutenez la voix populaire !",
@@ -34,7 +34,12 @@ const structuredData = {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/src/public/megaphone.svg" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/src/public/megaphone.svg"
+        />
         {
             structuredData && (
                 <script

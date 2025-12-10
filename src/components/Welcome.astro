@@ -1,14 +1,15 @@
 ---
-import { Image } from "astro:assets";
 import background from "../assets/background.svg";
+import { Image } from "astro:assets";
 
+import Politis from "../assets/politis.png";
+import Popo01 from "../assets/pauline-maucort-01.jpeg";
+// import Popo02 from "../assets/pauline-maucort-02.jpeg";
 import Postcard from "../assets/postcard.png";
 import Remi01 from "../assets/remi-douat-01.jpg";
-import Remi02 from "../assets/remi-douat-02.jpg";
-import Popo01 from "../assets/pauline-maucort-01.jpeg";
-import Popo02 from "../assets/pauline-maucort-02.jpeg";
-import Politis from "../assets/politis.png";
+// import Remi02 from "../assets/remi-douat-02.jpg";
 import Regards from "../assets/regards.png";
+import Supporters from "./Supporters.astro";
 ---
 
 <div class="relative min-h-screen">
@@ -20,11 +21,15 @@ import Regards from "../assets/regards.png";
         fetchpriority="high"
     />
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-16 sm:space-y-20 pb-20">
-      <section id="hero" class="@container space-y-8 sm:space-y-12">
-          <h1 class="block w-full font-[Greve-900] tracking-normal clamp-[text,5xl,9.375rem,@xl,@2xl] text-[#1b1b1b] font-bold leading-tight animate-fade-in wrap-break-word">
-          Que demande le peuple&nbsp;!
-        </h1>
+    <main
+        class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-16 sm:space-y-20 pb-20"
+    >
+        <section id="hero" class="@container space-y-8 sm:space-y-12">
+            <h1
+                class="block w-full font-[Greve-900] tracking-normal clamp-[text,5xl,9.375rem,@xl,@2xl] text-[#1b1b1b] font-bold leading-tight animate-fade-in wrap-break-word"
+            >
+                Que demande le peuple&nbsp;!
+            </h1>
 
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <p
@@ -33,9 +38,9 @@ import Regards from "../assets/regards.png";
                     La parole est aux relégué·e·s
                 </p>
                 <div class="w-full">
-                    <Image 
-                        src={Postcard} 
-                        alt="Carte postale illustrant le projet Que demande le peuple" 
+                    <Image
+                        src={Postcard}
+                        alt="Carte postale illustrant le projet Que demande le peuple"
                         class="w-full h-auto rounded-lg shadow-lg"
                         loading="eager"
                     />
@@ -43,25 +48,39 @@ import Regards from "../assets/regards.png";
             </div>
 
             <div class="space-y-6">
-                <h2 class="text-xl sm:text-2xl text-gray-800 max-w-4xl leading-relaxed font-medium">
-                    "Que demande le peuple ?" série de podcasts qui fait entendre la
-                    parole des oubliés, entre colère et solidarité. Soutenez la voix
-                    populaire.
+                <h2
+                    class="text-xl sm:text-2xl text-gray-800 max-w-4xl leading-relaxed font-medium"
+                >
+                    "Que demande le peuple ?" série de podcasts qui fait
+                    entendre la parole des oubliés, entre colère et solidarité.
+                    Soutenez la voix populaire.
                 </h2>
 
                 <!-- CTA Button -->
                 <div class="pt-4">
-                    <a 
-                        href="https://fr.ulule.com/que-demande-le-peuple--/" 
-                        rel="noopener noreferrer" 
+                    <a
+                        href="https://fr.ulule.com/que-demande-le-peuple--/"
+                        rel="noopener noreferrer"
                         target="_blank"
                         class="inline-block"
                         aria-label="Soutenez le projet sur Ulule (ouvre dans un nouvel onglet)"
                     >
-                        <button class="btn btn-lg bg-[#eb452f] hover:bg-[#eb452f] text-white border-[#eb452f] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <svg fill="#fff" width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <button
+                            class="btn btn-lg bg-[#eb452f] hover:bg-[#eb452f] text-white border-[#eb452f] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                        >
+                            <svg
+                                fill="#fff"
+                                width="24px"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                role="img"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                            >
                                 <title>Ulule</title>
-                                <path d="M12 0A11.992 11.992 0 001.676 5.884l-.822-.822a.499.499 0 00-.707 0A.5.5 0 000 5.416V12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12V5.416a.5.5 0 00-.854-.354l-.823.822A11.992 11.992 0 0012 0zM6.814 7.626a5.526 5.526 0 014.971 3.095 2.739 2.739 0 00.13 3.754.122.122 0 00.17 0 2.738 2.738 0 00.13-3.754 5.526 5.526 0 015.411-3.077c2.702.214 4.876 2.41 5.064 5.113a5.528 5.528 0 01-10.419 2.944.304.304 0 00-.542 0 5.528 5.528 0 01-10.42-2.944c.189-2.703 2.363-4.9 5.064-5.113.148-.012.295-.018.44-.018zm-.42 1.22a3.501 3.496 0 00-.235.008c-.013.16-.116.262-.248.388l-.052.05c-.117.113-.335.323-.333.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.137-.523-.347-.722-.143-.13-.289-.281-.308-.422a3.501 3.496 0 00-.214-.01zm11.211 0a3.501 3.495 0 00-.235.008c-.013.16-.117.262-.249.388l-.051.05c-.118.113-.336.323-.334.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.136-.523-.347-.723-.143-.13-.288-.28-.307-.42a3.501 3.495 0 00-.215-.011zM6.093 8.86a3.501 3.496 0 00-3.2 3.48 3.501 3.496 0 003.502 3.496 3.501 3.496 0 003.5-3.496 3.501 3.496 0 00-3.033-3.46 2.393 2.393 0 11-2.86 2.362A2.386 2.386 0 016.093 8.86zm11.816 0a2.386 2.386 0 012.088 2.382 2.391 2.391 0 11-4.784-.033 2.393 2.393 0 011.92-2.328 3.501 3.495 0 00-3.03 3.46 3.501 3.495 0 003.502 3.495 3.501 3.495 0 003.501-3.496 3.501 3.495 0 00-3.197-3.48Z"/>
+                                <path
+                                    d="M12 0A11.992 11.992 0 001.676 5.884l-.822-.822a.499.499 0 00-.707 0A.5.5 0 000 5.416V12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12V5.416a.5.5 0 00-.854-.354l-.823.822A11.992 11.992 0 0012 0zM6.814 7.626a5.526 5.526 0 014.971 3.095 2.739 2.739 0 00.13 3.754.122.122 0 00.17 0 2.738 2.738 0 00.13-3.754 5.526 5.526 0 015.411-3.077c2.702.214 4.876 2.41 5.064 5.113a5.528 5.528 0 01-10.419 2.944.304.304 0 00-.542 0 5.528 5.528 0 01-10.42-2.944c.189-2.703 2.363-4.9 5.064-5.113.148-.012.295-.018.44-.018zm-.42 1.22a3.501 3.496 0 00-.235.008c-.013.16-.116.262-.248.388l-.052.05c-.117.113-.335.323-.333.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.137-.523-.347-.722-.143-.13-.289-.281-.308-.422a3.501 3.496 0 00-.214-.01zm11.211 0a3.501 3.495 0 00-.235.008c-.013.16-.117.262-.249.388l-.051.05c-.118.113-.336.323-.334.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.136-.523-.347-.723-.143-.13-.288-.28-.307-.42a3.501 3.495 0 00-.215-.011zM6.093 8.86a3.501 3.496 0 00-3.2 3.48 3.501 3.496 0 003.502 3.496 3.501 3.496 0 003.5-3.496 3.501 3.496 0 00-3.033-3.46 2.393 2.393 0 11-2.86 2.362A2.386 2.386 0 016.093 8.86zm11.816 0a2.386 2.386 0 012.088 2.382 2.391 2.391 0 11-4.784-.033 2.393 2.393 0 011.92-2.328 3.501 3.495 0 00-3.03 3.46 3.501 3.495 0 003.502 3.495 3.501 3.495 0 003.501-3.496 3.501 3.495 0 00-3.197-3.48Z"
+                                ></path>
                             </svg>
                             SOUTENIR LE PROJET
                         </button>
@@ -71,76 +90,7 @@ import Regards from "../assets/regards.png";
 
             <div class="divider my-12"></div>
 
-            <!-- Supporters Section -->
-            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 shadow-md space-y-8">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6 font-[Greve-900] text-center text-gray-900">
-                    Nos soutiens
-                </h2>
-              
-                <div class="text-base sm:text-lg leading-relaxed text-gray-800 space-y-3 text-center max-w-5xl mx-auto">
-                    <p class="text-balance">
-                        <strong>Danièle Linhart</strong>, sociologue du travail.
-                        <strong>Jean-Baptiste Comby</strong>, sociologue.
-                        <strong>Romane Bary</strong>, éducatrice spécialisée.
-                        <strong>Tanguy Martin</strong>, agronome.
-                        <strong>Aurore Puel</strong> et le réseau <strong>CIVAM</strong>.
-                        <strong>Pascal Paquin</strong>, co-président de la Solicagnole (89).
-                        <strong>Fanny Hugues</strong>, sociologue.
-                        <strong>Longueur d'Ondes</strong>, festival de la radio et de l'écoute, Brest.
-                        <strong>Clara Deville</strong>, sociologue.
-                        <strong>Paul Pasquali</strong>, sociologue chercheur au CNRS et membre de l'IRIS.
-                        <strong>Etienne Douat</strong>, sociologue, université de Poitiers.
-                        <strong>Valérie Chigot</strong>, médecin.
-                        <strong>Dominique Cardon</strong>, sociologue membre du Médialab de Sciences Po.
-                        <strong>Marie Broll</strong>, professeure d'Éducation Socioculturelle en lycée agricole.
-                        <strong>Benjamin Coriat</strong>, économiste, membre des Économistes atterrés.
-                        <strong>Pierre Faucheur</strong>, mécanicien en fin de potentiel.
-                        <strong>Judith Aynes</strong>, coordinatrice de l'association Convergence des Possibles (89).
-                        <strong>Camille Lakhlifi</strong>, chercheuse en sciences cognitives.
-                        <strong>Eric Parthuisot</strong>, candidat du Parti Pirate en Meurthe-et-Moselle.
-                        <strong>Annie Maucort</strong>, assistante sociale retraitée.
-                        <strong>Nadege Hacq</strong>, fondatrice École ETRE dans l'Yonne.
-                        <strong>Pauline Schill</strong>, chanteuse et comédienne.
-                        <strong>Brigitte Costaz</strong>, professeure d'Anglais retraitée.
-                        <strong>Emilie Chaudet</strong>, documentariste.
-                        <strong>Justine Bernachon</strong>, circassienne.
-                        <strong>Laure-Elisabeth Bourdaud</strong>, scénariste.
-                        <strong>Coline Beuvelet</strong>, monteuse.
-                        <strong>Manon Prigent</strong>, documentariste.
-                        <strong>Guillaume Perier</strong>, apiculteur.
-                        <strong>Baptiste Chenin</strong>, entrepreneur individuel.
-                        <strong>Brieux Michoud</strong>, directeur d'associations.
-                        <strong>Clémence Michoud</strong>, coordinatrice culturelle en centre de détention.
-                        <strong>Baptiste Sanson</strong>, agronome.
-                        <strong>Maurice Rossy</strong>, directeur de recherche au CNRS retraité.
-                        <strong>Michaël Dudragne</strong>, conseiller spécial du Président de la Région Bourgogne Franche Comté.
-                        <strong>Jenni Joupi</strong>, RH à l'OCDE.
-                        <strong>Roger Pernel</strong>, magnétiseur coupeur de feu.
-                        <strong>Emmanuelle Berger</strong>, orthophoniste.
-                        <strong>Jean-Louis Maucort</strong>, agent EDF retraité.
-                        <strong>Yves Rouvière</strong>, agent EDF retraité.
-                        <strong>Martine Gouny</strong>, enseignante retraitée.
-                        <strong>Marine de Royer</strong>, réalisatrice.
-                        <strong>Ludivine Auberger</strong>, coordinatrice actions culturelles et communication.
-                        <strong>Yann Yver</strong>.&nbsp;
-                    </p>
-                </div>
-              
-                <div class="pt-8 text-center">
-                    <a 
-                        href="mailto:contact@quedemandelepeuple.fr" 
-                        class="inline-block group"
-                        aria-label="Nous rejoindre par email"
-                    >
-                        <button class="btn btn-lg bg-[#eb452f] hover:bg-[#eb452f] text-white border-[#eb452f] shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill="currentColor" d="M2 20V4h20v16zm10-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"/>
-                            </svg>
-                            REJOIGNEZ-NOUS
-                        </button>
-                    </a>
-                </div>
-            </div>
+            <Supporters />
 
             <div class="divider my-12"></div>
 
@@ -163,14 +113,17 @@ import Regards from "../assets/regards.png";
             </article>
 
             <figure class="space-y-3">
-                <Image 
-                    src={Remi01} 
-                    alt="Rémi Dybowski-Douat micro à la main interviewant Jonathan Roditi dans l'arboretum de Nogent sur Vernisson, juin 2024" 
+                <Image
+                    src={Remi01}
+                    alt="Rémi Dybowski-Douat micro à la main interviewant Jonathan Roditi dans l'arboretum de Nogent sur Vernisson, juin 2024"
                     class="rounded-2xl w-full h-auto shadow-xl"
                     loading="lazy"
                 />
-                <figcaption class="text-sm sm:text-base text-gray-700 italic text-center px-4">
-                    Au Lycée agricole de Nogent sur Vernisson, avec Jonathan Roditi – juin 2024
+                <figcaption
+                    class="text-sm sm:text-base text-gray-700 italic text-center px-4"
+                >
+                    Au Lycée agricole de Nogent sur Vernisson, avec Jonathan
+                    Roditi – juin 2024
                 </figcaption>
             </figure>
 
@@ -193,87 +146,114 @@ import Regards from "../assets/regards.png";
                 </p>
             </article>
 
-            <blockquote class="border-l-4 border-[#eb452f] pl-6 py-4 my-12 bg-white/50 backdrop-blur-sm rounded-r-lg">
-                <p class="text-center italic text-xl sm:text-2xl text-gray-900 leading-relaxed">
+            <blockquote
+                class="border-l-4 border-[#eb452f] pl-6 py-4 my-12 bg-white/50 backdrop-blur-sm rounded-r-lg"
+            >
+                <p
+                    class="text-center italic text-xl sm:text-2xl text-gray-900 leading-relaxed"
+                >
                     "Résiste<br />Suis ton cœur qui insiste<br />Ce monde n'est
                     pas le tien…"
                 </p>
-                <footer class="pt-4 text-base sm:text-lg text-center text-gray-700 font-medium">
+                <footer
+                    class="pt-4 text-base sm:text-lg text-center text-gray-700 font-medium"
+                >
                     — France Gall
                 </footer>
             </blockquote>
 
-            <h3 class="font-[Greve-900] text-center text-3xl sm:text-4xl lg:text-5xl leading-tight max-w-4xl mx-auto py-8 text-gray-900">
+            <h3
+                class="font-[Greve-900] text-center text-3xl sm:text-4xl lg:text-5xl leading-tight max-w-4xl mx-auto py-8 text-gray-900"
+            >
                 Notre projet est né d'une conviction : la parole populaire est
                 souveraine. Elle doit être entendue dans sa complexité.
             </h3>
 
             <article class="space-y-6 text-gray-800 leading-relaxed text-lg">
                 <p>
-                    Nous lançons la série de podcasts <strong class="text-accent">"Que demande le peuple ?"</strong>. 
-                    Un tour de France sonore, à hauteur de femmes et d'hommes,
-                    pour donner à entendre ce qui se dit loin des micros des
-                    plateaux télé. Chaque épisode partira d'une question simple :
-                    comment vivre dignement ? Derrière cette question universelle se
-                    déclinent mille réalités : habiter, se déplacer, se nourrir,
-                    travailler, se soigner, s'instruire, bricoler, partager…
+                    Nous lançons la série de podcasts <strong
+                        class="text-accent">"Que demande le peuple ?"</strong
+                    >. Un tour de France sonore, à hauteur de femmes et
+                    d'hommes, pour donner à entendre ce qui se dit loin des
+                    micros des plateaux télé. Chaque épisode partira d'une
+                    question simple : comment vivre dignement ? Derrière cette
+                    question universelle se déclinent mille réalités : habiter,
+                    se déplacer, se nourrir, travailler, se soigner,
+                    s'instruire, bricoler, partager…
                 </p>
-                
+
                 <p>
-                    Nous irons dans l'Yonne, en Seine-Saint-Denis, en Haute-Marne, dans
-                    le Gard, en Gironde, en Mayenne… Partout où s'exprime ce
-                    sentiment d'abandon, mais aussi cette volonté farouche de
-                    résister, de "tenir ensemble" malgré tout.
+                    Nous irons dans l'Yonne, en Seine-Saint-Denis, en
+                    Haute-Marne, dans le Gard, en Gironde, en Mayenne… Partout
+                    où s'exprime ce sentiment d'abandon, mais aussi cette
+                    volonté farouche de résister, de "tenir ensemble" malgré
+                    tout.
                 </p>
-                
+
                 <p>
-                    Notre démarche est claire : <strong class="text-accent">ne pas parler "sur" les gens, mais parler avec eux</strong>. 
-                    Passer du temps, tisser de la confiance, recueillir une
+                    Notre démarche est claire : <strong class="text-accent"
+                        >ne pas parler "sur" les gens, mais parler avec eux</strong
+                    >. Passer du temps, tisser de la confiance, recueillir une
                     parole authentique, sans filtre.
                 </p>
             </article>
 
             <figure class="space-y-3 py-8">
-                <Image 
-                    src={Popo01} 
-                    alt="Pauline Maucort, interviewant un habitant d'Arcy-sur-Cure, septembre 2025" 
+                <Image
+                    src={Popo01}
+                    alt="Pauline Maucort, interviewant un habitant d'Arcy-sur-Cure, septembre 2025"
                     class="rounded-2xl w-full h-auto shadow-xl"
                     loading="lazy"
                 />
-                <figcaption class="text-sm sm:text-base text-gray-700 italic text-center px-4">
+                <figcaption
+                    class="text-sm sm:text-base text-gray-700 italic text-center px-4"
+                >
                     Pauline Maucort à Arcy-sur-Cure – septembre 2025
                 </figcaption>
             </figure>
 
-            <article class="space-y-6 text-gray-800 leading-relaxed text-lg bg-white/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8">
+            <article
+                class="space-y-6 text-gray-800 leading-relaxed text-lg bg-white/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8"
+            >
                 <p>
-                    Nous sommes reporters pour les émissions documentaires de France
-
-                    Culture. Après bientôt 20 ans d'expérience, pour la première
-                    fois, nous voulons conduire un projet hors cases existantes et
-                    inventer un format pour que la parole populaire se déploie
-                    davantage.
+                    Nous sommes reporters pour les émissions documentaires de
+                    France Culture. Après bientôt 20 ans d'expérience, pour la
+                    première fois, nous voulons conduire un projet hors cases
+                    existantes et inventer un format pour que la parole
+                    populaire se déploie davantage.
                 </p>
                 <p class="text-xl font-semibold text-accent">
                     Ces épisodes seront en libre accès. Nous espérons qu'ils
-                    provoqueront des rencontres et attiseront les débats, partout
-                    sur le territoire.
+                    provoqueront des rencontres et attiseront les débats,
+                    partout sur le territoire.
                 </p>
             </article>
         </section>
 
         <!-- CTA Section -->
         <div class="text-center py-12">
-            <a 
-                href="https://fr.ulule.com/que-demande-le-peuple--/" 
-                rel="noopener noreferrer" 
+            <a
+                href="https://fr.ulule.com/que-demande-le-peuple--/"
+                rel="noopener noreferrer"
                 target="_blank"
                 class="inline-block group"
             >
-                <button class="btn btn-xl bg-[#eb452f] hover:bg-[#eb452f] text-white border-[#eb452f] shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105">
-                    <svg fill="#fff" width="28px" height="28px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <button
+                    class="btn btn-xl bg-[#eb452f] hover:bg-[#eb452f] text-white border-[#eb452f] shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                >
+                    <svg
+                        fill="#fff"
+                        width="28px"
+                        height="28px"
+                        viewBox="0 0 24 24"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
                         <title>Ulule</title>
-                        <path d="M12 0A11.992 11.992 0 001.676 5.884l-.822-.822a.499.499 0 00-.707 0A.5.5 0 000 5.416V12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12V5.416a.5.5 0 00-.854-.354l-.823.822A11.992 11.992 0 0012 0zM6.814 7.626a5.526 5.526 0 014.971 3.095 2.739 2.739 0 00.13 3.754.122.122 0 00.17 0 2.738 2.738 0 00.13-3.754 5.526 5.526 0 015.411-3.077c2.702.214 4.876 2.41 5.064 5.113a5.528 5.528 0 01-10.419 2.944.304.304 0 00-.542 0 5.528 5.528 0 01-10.42-2.944c.189-2.703 2.363-4.9 5.064-5.113.148-.012.295-.018.44-.018zm-.42 1.22a3.501 3.496 0 00-.235.008c-.013.16-.116.262-.248.388l-.052.05c-.117.113-.335.323-.333.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.137-.523-.347-.722-.143-.13-.289-.281-.308-.422a3.501 3.496 0 00-.214-.01zm11.211 0a3.501 3.495 0 00-.235.008c-.013.16-.117.262-.249.388l-.051.05c-.118.113-.336.323-.334.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.136-.523-.347-.723-.143-.13-.288-.28-.307-.42a3.501 3.495 0 00-.215-.011zM6.093 8.86a3.501 3.496 0 00-3.2 3.48 3.501 3.496 0 003.502 3.496 3.501 3.496 0 003.5-3.496 3.501 3.496 0 00-3.033-3.46 2.393 2.393 0 11-2.86 2.362A2.386 2.386 0 016.093 8.86zm11.816 0a2.386 2.386 0 012.088 2.382 2.391 2.391 0 11-4.784-.033 2.393 2.393 0 011.92-2.328 3.501 3.495 0 00-3.03 3.46 3.501 3.495 0 003.502 3.495 3.501 3.495 0 003.501-3.496 3.501 3.495 0 00-3.197-3.48Z"/>
+                        <path
+                            d="M12 0A11.992 11.992 0 001.676 5.884l-.822-.822a.499.499 0 00-.707 0A.5.5 0 000 5.416V12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12V5.416a.5.5 0 00-.854-.354l-.823.822A11.992 11.992 0 0012 0zM6.814 7.626a5.526 5.526 0 014.971 3.095 2.739 2.739 0 00.13 3.754.122.122 0 00.17 0 2.738 2.738 0 00.13-3.754 5.526 5.526 0 015.411-3.077c2.702.214 4.876 2.41 5.064 5.113a5.528 5.528 0 01-10.419 2.944.304.304 0 00-.542 0 5.528 5.528 0 01-10.42-2.944c.189-2.703 2.363-4.9 5.064-5.113.148-.012.295-.018.44-.018zm-.42 1.22a3.501 3.496 0 00-.235.008c-.013.16-.116.262-.248.388l-.052.05c-.117.113-.335.323-.333.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.137-.523-.347-.722-.143-.13-.289-.281-.308-.422a3.501 3.496 0 00-.214-.01zm11.211 0a3.501 3.495 0 00-.235.008c-.013.16-.117.262-.249.388l-.051.05c-.118.113-.336.323-.334.7a.875.875 0 00.856.858c.485-.003.88-.383.882-.85.002-.325-.136-.523-.347-.723-.143-.13-.288-.28-.307-.42a3.501 3.495 0 00-.215-.011zM6.093 8.86a3.501 3.496 0 00-3.2 3.48 3.501 3.496 0 003.502 3.496 3.501 3.496 0 003.5-3.496 3.501 3.496 0 00-3.033-3.46 2.393 2.393 0 11-2.86 2.362A2.386 2.386 0 016.093 8.86zm11.816 0a2.386 2.386 0 012.088 2.382 2.391 2.391 0 11-4.784-.033 2.393 2.393 0 011.92-2.328 3.501 3.495 0 00-3.03 3.46 3.501 3.495 0 003.502 3.495 3.501 3.495 0 003.501-3.496 3.501 3.495 0 00-3.197-3.48Z"
+                        ></path>
                     </svg>
                     <span class="text-lg">Pour nous soutenir</span>
                 </button>
@@ -284,14 +264,20 @@ import Regards from "../assets/regards.png";
 
         <!-- Team Section -->
         <section class="space-y-12 sm:space-y-16">
-            <h3 class="text-center font-[Greve-900] text-4xl sm:text-5xl lg:text-6xl text-gray-900">
+            <h3
+                class="text-center font-[Greve-900] text-4xl sm:text-5xl lg:text-6xl text-gray-900"
+            >
                 Qui porte le projet
             </h3>
 
             <div class="mx-auto max-w-6xl">
                 <!-- Team Members -->
-                <div class="flex flex-col lg:flex-row justify-center gap-8 lg:gap-16 pt-8">
-                    <article class="card bg-white w-full lg:w-96 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <div
+                    class="flex flex-col lg:flex-row justify-center gap-8 lg:gap-16 pt-8"
+                >
+                    <article
+                        class="card bg-white w-full lg:w-96 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                    >
                         <!-- <figure class="overflow-hidden">
                             <Image 
                                 src={Popo02} 
@@ -301,18 +287,47 @@ import Regards from "../assets/regards.png";
                             />
                         </figure> -->
                         <div class="card-body">
-                            <h4 class="card-title text-2xl text-gray-900">Pauline Maucort</h4>
+                            <h4 class="card-title text-2xl text-gray-900">
+                                Pauline Maucort
+                            </h4>
                             <p class="text-gray-700 leading-relaxed">
-                                Journaliste à France Culture depuis 2007. Je signe de nombreux
-                                documentaires pour Les Pieds sur Terre, La Série documentaire ou Une
-                                histoire particulière. Basée en Bourgogne, je sillonne les routes pour
-                                recueillir les récits d'un pays qui doute mais continue de résister en
-                                créant du lien.
+                                Journaliste à France Culture depuis 2007. Je
+                                signe de nombreux documentaires pour Les Pieds
+                                sur Terre, La Série documentaire ou Une histoire
+                                particulière. Basée en Bourgogne, je sillonne
+                                les routes pour recueillir les récits d'un pays
+                                qui doute mais continue de résister en créant du
+                                lien.
                             </p>
+                            <div class="flex card-actions pt-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 32 32"
+                                    class="self-bottom"
+                                    ><rect width="32" height="32" fill="none"
+                                    ></rect><path
+                                        fill="currentColor"
+                                        d="M5 5v22h22V5zm2 2h18v18H7zm6 3v2h5.563L9.28 21.281l1.438 1.438L20 13.437V19h2v-9z"
+                                    ></path></svg
+                                >
+                                <a
+                                    class="link link-accent text-lg font-medium hover:underline"
+                                    href="https://www.radiofrance.fr/personnes/pauline-maucort"
+                                    rel="nofollow noopener noreferrer"
+                                    target="_blank"
+                                    aria-label="écouter les documentaires de Pauline Maucort sur le site de Radio France (ouvre dans un nouvel onglet)"
+                                >
+                                    Pour écouter
+                                </a>
+                            </div>
                         </div>
                     </article>
-                
-                    <article class="card bg-white w-full lg:w-96 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+
+                    <article
+                        class="card bg-white w-full lg:w-96 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                    >
                         <!-- <figure class="overflow-hidden">
                             <Image 
                                 src={Remi02} 
@@ -322,48 +337,86 @@ import Regards from "../assets/regards.png";
                             />
                         </figure> -->
                         <div class="card-body">
-                            <h4 class="card-title text-2xl text-gray-900">Rémi Dybowski Douat</h4>
+                            <h4 class="card-title text-2xl text-gray-900">
+                                Rémi Dybowski Douat
+                            </h4>
                             <p class="text-gray-700 leading-relaxed">
-                                Producteur et journaliste à Radio France depuis 2010. Je travaille
-                                notamment sur l'extrême droite et les mouvements sociaux pour Les
-                                Pieds sur Terre et La Série documentaire. Je fais entendre la parole
-                                populaire là où elle est trop souvent ignorée.
+                                Producteur et journaliste à Radio France depuis
+                                2010. Je travaille notamment sur l'extrême
+                                droite et les mouvements sociaux pour Les Pieds
+                                sur Terre et La Série documentaire. Je fais
+                                entendre la parole populaire là où elle est trop
+                                souvent ignorée.
                             </p>
+                            <div class="flex card-actions pt-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 32 32"
+                                    class="self-bottom"
+                                    ><rect width="32" height="32" fill="none"
+                                    ></rect><path
+                                        fill="currentColor"
+                                        d="M5 5v22h22V5zm2 2h18v18H7zm6 3v2h5.563L9.28 21.281l1.438 1.438L20 13.437V19h2v-9z"
+                                    ></path></svg
+                                >
+                                <a
+                                    class="link link-accent text-lg font-medium hover:underline"
+                                    href="https://www.radiofrance.fr/personnes/remi-dybowski-douat"
+                                    rel="nofollow noopener noreferrer"
+                                    target="_blank"
+                                    aria-label="écouter les documentaires de Pauline Maucort sur le site de Radio France (ouvre dans un nouvel onglet)"
+                                >
+                                    Pour écouter
+                                </a>
+                            </div>
                         </div>
                     </article>
                 </div>
-            
+
                 <!-- Media Partners Section -->
                 <div class="pt-16 sm:pt-20 space-y-8">
-                    <h3 class="text-center font-bold text-xl sm:text-2xl text-gray-900 px-4">
-                        Deux médias indépendants seront diffuseurs de la série de podcasts :
+                    <h3
+                        class="text-center font-bold text-xl sm:text-2xl text-gray-900 px-4"
+                    >
+                        Deux médias indépendants seront diffuseurs de la série
+                        de podcasts :
                     </h3>
-                
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 pt-6">
-                        <article class="card bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
+
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 pt-6"
+                    >
+                        <article
+                            class="card bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                        >
                             <figure class="overflow-hidden bg-white p-6">
-                                <Image 
-                                    src={Politis} 
-                                    alt="Logo du média Politis" 
+                                <Image
+                                    src={Politis}
+                                    alt="Logo du média Politis"
                                     class="w-full h-auto max-h-32 object-contain"
                                     loading="lazy"
                                 />
                             </figure>
                             <div class="card-body">
-                                <h4 class="card-title text-2xl text-gray-900">Politis</h4>
+                                <h4 class="card-title text-2xl text-gray-900">
+                                    Politis
+                                </h4>
                                 <p class="text-gray-700 leading-relaxed">
-                                    Média indépendant qui porte un regard critique sur l'actualité
-                                    politique générale depuis 1988. Tous les sujets sont abordés à travers
-                                    des interviews, dossiers, reportages, enquêtes, articles et éditoriaux.
-                                    Hebdomadaire papier et quotidien en ligne, Politis est devenu une
-                                    coopérative appartenant à ses salarié-es,
- ses lecteurices et ses
-                                    partenaires.
+                                    Média indépendant qui porte un regard
+                                    critique sur l'actualité politique générale
+                                    depuis 1988. Tous les sujets sont abordés à
+                                    travers des interviews, dossiers,
+                                    reportages, enquêtes, articles et
+                                    éditoriaux. Hebdomadaire papier et quotidien
+                                    en ligne, Politis est devenu une coopérative
+                                    appartenant à ses salarié-es, ses
+                                    lecteurices et ses partenaires.
                                 </p>
                                 <div class="card-actions pt-2">
-                                    <a 
-                                        class="link link-accent text-lg font-medium hover:underline" 
-                                        href="https://www.politis.fr" 
+                                    <a
+                                        class="link link-accent text-lg font-medium hover:underline"
+                                        href="https://www.politis.fr"
                                         rel="nofollow noopener noreferrer"
                                         target="_blank"
                                         aria-label="Visiter le site de Politis (ouvre dans un nouvel onglet)"
@@ -373,29 +426,35 @@ import Regards from "../assets/regards.png";
                                 </div>
                             </div>
                         </article>
-                    
-                        <article class="card bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
+
+                        <article
+                            class="card bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                        >
                             <figure class="overflow-hidden bg-white p-6">
-                                <Image 
-                                    src={Regards} 
-                                    alt="Logo du média Regards" 
+                                <Image
+                                    src={Regards}
+                                    alt="Logo du média Regards"
                                     class="w-full h-auto max-h-32 object-contain"
                                     loading="lazy"
                                 />
                             </figure>
                             <div class="card-body">
-                                <h4 class="card-title text-2xl text-gray-900">Regards</h4>
+                                <h4 class="card-title text-2xl text-gray-900">
+                                    Regards
+                                </h4>
                                 <p class="text-gray-700 leading-relaxed">
-                                    Magazine en ligne indépendant qui se consacre à l'analyse politique,
-                                    sociale et culturelle. Héritier d'une longue tradition intellectuelle
-                                    et militante, Regards défend une gauche critique, pluraliste et
-                                    démocratique, attachée à la justice sociale, à l'écologie et à
-                                    l'émancipation collective.
+                                    Magazine en ligne indépendant qui se
+                                    consacre à l'analyse politique, sociale et
+                                    culturelle. Héritier d'une longue tradition
+                                    intellectuelle et militante, Regards défend
+                                    une gauche critique, pluraliste et
+                                    démocratique, attachée à la justice sociale,
+                                    à l'écologie et à l'émancipation collective.
                                 </p>
                                 <div class="card-actions pt-2">
-                                    <a 
-                                        class="link link-accent text-lg font-medium hover:underline" 
-                                        href="https://www.regards.fr" 
+                                    <a
+                                        class="link link-accent text-lg font-medium hover:underline"
+                                        href="https://www.regards.fr"
                                         rel="nofollow noopener noreferrer"
                                         target="_blank"
                                         aria-label="Visiter le site de Regards (ouvre dans un nouvel onglet)"

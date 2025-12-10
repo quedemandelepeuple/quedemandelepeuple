@@ -6,6 +6,8 @@ import { copyFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
+import sitemap from "@astrojs/sitemap";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -31,7 +33,7 @@ function copyAssetsIgnore() {
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare(),
-  integrations: [copyAssetsIgnore()],
+  integrations: [copyAssetsIgnore(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
