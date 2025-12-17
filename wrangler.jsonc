@@ -5,15 +5,15 @@
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
     "binding": "ASSETS",
-    "directory": "./dist",
+    "directory": "./dist"
   },
   "observability": {
-    "enabled": true,
+    "enabled": true
   },
   "routes": [
     {
       "pattern": "quedemandelepeuple.fr/*",
-      "zone_name": "quedemandelepeuple.fr",
-    },
-  ],
+      "zone_name": "quedemandelepeuple.fr"
+    }
+  ]
 }

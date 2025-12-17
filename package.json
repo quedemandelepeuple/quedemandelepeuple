@@ -12,14 +12,14 @@
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/sitemap": "^3.6.0",
-    "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.16.4",
-    "daisyui": "^5.5.8",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.6",
+    "daisyui": "^5.5.14",
     "sharp": "^0.34.5",
     "tailwind-clamp": "^4.1.2",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "wrangler": "^4.53.0"
+    "wrangler": "^4.55.0"
   }
 }
